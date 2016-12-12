@@ -635,6 +635,16 @@ file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/make_tcfs_symlink.cmake
 "exec_program(\"${CMAKE_COMMAND}\" ARGS -E create_symlink ${BIN_INSTALL_DIR}/indi_tcfs_focus \$ENV{DESTDIR}${BIN_INSTALL_DIR}/indi_tcfs3_focus)\n")
 set_target_properties(indi_tcfs_focus PROPERTIES POST_INSTALL_SCRIPT ${CMAKE_CURRENT_BINARY_DIR}/make_tcfs_symlink.cmake)
 
+################ USB_Focus V3e Focuser ################
+
+set(usbfocusv3_SRCS
+        ${CMAKE_CURRENT_SOURCE_DIR}/drivers/focuser/usbfocusv3.cpp
+   )
+
+add_executable(indi_usbfocusv3_focus ${usbfocusv3_SRCS})
+target_link_libraries(indi_usbfocusv3_focus indidriver)
+install(TARGETS indi_usbfocusv3_focus RUNTIME DESTINATION bin )
+
 #################################################################################
 
 #####################################
