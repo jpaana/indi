@@ -231,3 +231,11 @@ SET(deepskydad_fp1_SRC
 add_executable(indi_deepskydad_fp1 ${deepskydad_fp1_SRC})
 target_link_libraries(indi_deepskydad_fp1 indidriver)
 install(TARGETS indi_deepskydad_fp1 RUNTIME DESTINATION bin)
+
+########### Arduheater Driver ###############
+SET(arduheater_SRC
+    arduheater.cpp)
+
+add_executable(indi_arduheater ${arduheater_SRC})
+target_link_libraries(indi_arduheater indidriver)
+install(TARGETS indi_arduheater RUNTIME DESTINATION bin)
