@@ -231,3 +231,12 @@ SET(deepskydad_fp1_SRC
 add_executable(indi_deepskydad_fp1 ${deepskydad_fp1_SRC})
 target_link_libraries(indi_deepskydad_fp1 indidriver)
 install(TARGETS indi_deepskydad_fp1 RUNTIME DESTINATION bin)
+
+########### Lynx Astro Dew Controller Driver ###############
+SET(lynx_astro_SRC
+    lynx_astro.cpp)
+
+add_executable(indi_lynx_astro ${lynx_astro_SRC})
+target_link_libraries(indi_lynx_astro indidriver)
+install(TARGETS indi_lynx_astro RUNTIME DESTINATION bin)
+

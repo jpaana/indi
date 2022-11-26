@@ -671,11 +671,15 @@
             <driver name="USB_Dewpoint">indi_usbdewpoint</driver>
             <version>1.0</version>
         </device>
-		<device label="DeepSkyDad FP1" manufacturer="DeepSkyDad">
+        <device label="Lynx Astro Dew Controller" manufacturer="Lynx Astro">
+            <driver name="Lynx_Astro">indi_lynx_astro</driver>
+            <version>1.0</version>
+        </device>
+        <device label="DeepSkyDad FP1" manufacturer="DeepSkyDad">
             <driver name="DeepSkyDad FP1">indi_deepskydad_fp1</driver>
             <version>1.0</version>
         </device>
-		<device label="DeepSkyDad FR1" manufacturer="DeepSkyDad">
+        <device label="DeepSkyDad FR1" manufacturer="DeepSkyDad">
             <driver name="DeepSkyDad FR1">indi_deepskydad_fr1</driver>
             <version>1.0</version>
         </device>
